@@ -22,7 +22,7 @@ public class EmployeesController {
 		return es.getAll();
 	}
 	@GetMapping("/employee")
-	public Employees getEmployee(@RequestParam("employeeId") int employeeId) {
+	public ArrayList<Employees> getEmployee(@RequestParam("employeeId") int employeeId) {
 		return es.getEmployee(employeeId);
 		
 	}

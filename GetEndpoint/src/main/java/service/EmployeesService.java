@@ -18,14 +18,14 @@ public class EmployeesService {
 		return employees;
 	}
 
-	public Employees getEmployee(int employeeId) {
-		
+	public ArrayList<Employees> getEmployee(int employeeId) {
+		 ArrayList<Employees> employees1=new ArrayList<Employees>();
 	        for (Employees e:employees){
 	                if(e.getEmployeeId()==employeeId) {
-	                return e;
+	                employees1.add(e);
 	         }
 	        }
-	    return null;
+	    return employees1;
 	}
 		
 	}
