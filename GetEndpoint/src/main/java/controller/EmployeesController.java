@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import model.Employees;
@@ -21,8 +22,8 @@ public class EmployeesController {
 	public ArrayList<Employees> getAll(){
 		return es.getAll();
 	}
-	@GetMapping("/employees/employeeId/{id}")
-	public Employees getEmployee(@PathVariable(value="id") int employeeId) {
+	@GetMapping("/employee")
+	public Employees getEmployee(@RequestParam("employeeId") int employeeId) {
 		return es.getEmployee(employeeId);
 		
 	}
