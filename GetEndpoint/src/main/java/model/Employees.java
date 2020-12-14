@@ -1,7 +1,5 @@
 package model;
 
-
-
 public class Employees {
  private int employeeId;
  private String name;

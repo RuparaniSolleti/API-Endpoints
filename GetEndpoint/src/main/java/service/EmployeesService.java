@@ -1,11 +1,9 @@
 package service;
 
 import java.util.ArrayList;
-
-
 import org.springframework.stereotype.Service;
-
 import model.Employees;
+
 @Service
 public class EmployeesService {
 	 ArrayList<Employees> employees=new ArrayList<Employees>();
@@ -20,15 +18,14 @@ public class EmployeesService {
 		return employees;
 	}
 
-	public ArrayList<Employees> getEmployee(int employeeId) {
+	public Employees getEmployee(int employeeId) {
 		
-		ArrayList<Employees> employees1=new ArrayList<Employees>();
 	        for (Employees e:employees){
 	                if(e.getEmployeeId()==employeeId) {
-	                employees1.add(e);
+	                return e;
 	         }
 	        }
-	    return employees1;
+	    return null;
 	}
 		
 	}
